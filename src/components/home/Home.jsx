@@ -5,12 +5,17 @@ import Lux from '../../assets/Lux logo.svg'
 const Home = () => {
   return (
     <div className='body'>
-      <img src={Lux} alt="Lux Logo" />
+      
 
       <div className="container">
+        <img src={Lux} alt="Lux Logo" />
         <h1 className='title'>Welcome to Lux</h1>
         <p>Bringing natural elegance to your digital experience</p>
-      </div>
+
+          <button>Get Started</button>
+          <button>Learn More</button>
+        </div>
+      
       
     </div>
   )
