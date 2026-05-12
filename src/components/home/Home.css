@@ -24,7 +24,7 @@
 
 .container img.animate-in {
     animation: fadeInUp 3s cubic-bezier(0.34, 1.56, 0.64, 1);
-    animation-delay: 0.9s;
+
     animation-fill-mode: forwards;
 }
 
@@ -36,7 +36,7 @@
 
 .container .title.animate-in {
     animation: fadeInUp 2s cubic-bezier(0.34, 1.56, 0.64, 1);
-    animation-delay: 0.9s;
+    
     animation-fill-mode: forwards;
 }
 
@@ -48,7 +48,7 @@
 
 .container p.animate-in {
     animation: fadeInUp 1.5s cubic-bezier(0.34, 1.56, 0.64, 1);
-    animation-delay: 0.9s;
+    
     animation-fill-mode: forwards;
 }
 
@@ -63,8 +63,15 @@
 
 .container button.animate-in {
     animation: fadeInUp 1.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-    animation-delay: 0.9s;
+
     animation-fill-mode: forwards;
+}
+
+.container img,
+.container .title,
+.container p,
+.container button {
+  opacity: 0;
 }
 
 
