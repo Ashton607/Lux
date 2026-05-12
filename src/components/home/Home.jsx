@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './Home.css'
 import Lux from '../../assets/Lux logo.svg'
+import { Link, useLocation } from 'react-router-dom'
 
 const Home = () => {
   useEffect(()=>{
@@ -45,8 +46,10 @@ const Home = () => {
         <h1 className='title'>Welcome to Lux</h1>
         <p>Bringing natural elegance to your digital experience</p>
 
-          <button>Get Started</button>
-          <button>Learn More</button>
+        <Link to='/dashboard'>
+        <button className='btn-primary'>Get Started</button>
+        </Link>
+        <button className='btn-secondary'>Learn More</button>
         </div>
       
       
