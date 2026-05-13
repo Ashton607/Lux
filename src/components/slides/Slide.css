@@ -1,0 +1,60 @@
+.slide1-container{
+    box-shadow: 0 8px 8px 8px rgb(0, 0, 0);
+    background: linear-gradient(135deg, #1b5369, #2d1b69, #7a5be0, #17052e);
+    height: 77vh;
+}
+.cards {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 20px;
+  position: absolute;
+  bottom: 110px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+}
+
+.card1,
+.card2,
+.card3 {
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 20px;
+  color: #fff;
+  flex: 1;
+  text-align: center;
+}
+
+.card1 img,
+.card2 img,
+.card3 img{
+    width: 120px;
+    height: 120px;
+}
+.card1 h3,
+.card2 h3,
+.card3 h3{
+    margin-top: -10px;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.card1 p,
+.card2 p,
+.card3 p{
+    font-size: 12px;
+    margin-top: -10px;
+}
+
+.card2 h3 span img{
+    width: 20px;
+    height: 20px;
+    margin-bottom: 20px;
+    margin-left: -20px;
+}
+.card2 h3 span{
+    color: #c9a84c;
+}
+

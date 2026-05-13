@@ -1,13 +1,21 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './Dashboard.css'
 import Lux from '../../assets/Lux logo.svg'
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Autoplay } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
+import Slide1 from '../slides/Slide1';
+import Slide2 from '../slides/Slide2';
+import Slide3 from '../slides/Slide3';
 
 const Dashboard = () => {
+  const slides = [
+  { id: 1, content:<Slide1/> },
+  { id: 2, content: <Slide2/> },
+  { id: 3, content: <Slide3/> },
+];
+
+const [current, setCurrent] = useState(0);
+
+const prev = () => setCurrent(current === 0 ? slides.length - 1 : current - 1);
+const next = () => setCurrent(current === slides.length - 1 ? 0 : current + 1);
   return (
     <div>
     
@@ -23,31 +31,18 @@ const Dashboard = () => {
       </div>
 
       <div className="advert-container">
-        <Swiper
-         modules={[Navigation, Pagination, Autoplay]}
-         navigation
-         pagination={{ clickable: true }}
-         autoplay={{ delay: 3000 }}
-         loop={true}
-         >
-        <SwiperSlide>
-        <div className="slide">
-        <h2>Slide 1</h2>
-        </div>
-        </SwiperSlide>
-
-        <SwiperSlide>
-        <div className="slide">
-        <h2>Slide 2</h2>
-        </div>
-        </SwiperSlide>
-
-        <SwiperSlide>
-        <div className="slide">
-        <h2>Slide 3</h2>
-        </div>
-        </SwiperSlide>
-        </Swiper>
+        <div className="slides">
+        {slides[current].content}
+        <div className="slides-footer">
+        <button onClick={prev}>←</button>
+        <button onClick={next}>→</button>
+        <div className="dots">
+         {slides.map((_, i) => (
+        <span key={i} className={i === current ? 'dot active' : 'dot'} onClick={() => setCurrent(i)} />
+         ))}
+      </div>
+      </div>
+      </div>
 
      </div>
 
