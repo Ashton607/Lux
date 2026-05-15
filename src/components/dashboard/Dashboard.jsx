@@ -35,12 +35,12 @@ const next = () => setCurrent(current === slides.length - 1 ? 0 : current + 1);
         {slides[current].content}
         <div className="slides-footer">
         <button onClick={prev}>←</button>
-        <button onClick={next}>→</button>
         <div className="dots">
          {slides.map((_, i) => (
         <span key={i} className={i === current ? 'dot active' : 'dot'} onClick={() => setCurrent(i)} />
          ))}
       </div>
+      <button onClick={next}>→</button>
       </div>
       </div>
 

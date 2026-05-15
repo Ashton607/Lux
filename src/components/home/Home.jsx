@@ -1,9 +1,20 @@
 import React, { useEffect, useState } from 'react'
 import './Home.css'
 import Lux from '../../assets/Lux logo.svg'
-import { Link, useLocation } from 'react-router-dom'
+import { Link, useLocation,useNavigate } from 'react-router-dom'
 
 const Home = () => {
+  const navigate = useNavigate();
+  const [loading, setLoading] = useState(false);
+
+  const handleNavigate = (path) => {
+    setLoading(true);
+    setTimeout(() => {
+      navigate(path);
+    }, 1500); // how long the loader shows
+  };
+
+  
   useEffect(()=>{
     const observer = new IntersectionObserver((entries)=>{
       entries.forEach(entry =>{
@@ -46,9 +57,14 @@ const Home = () => {
         <h1 className='title'>Welcome to Lux</h1>
         <p>Bringing natural elegance to your digital experience</p>
 
-        <Link to='/dashboard'>
-        <button className='btn-primary'>Get Started</button>
-        </Link>
+        {loading && (
+        <div className="loader-overlay">
+          <div className="loader"></div>
+        </div>
+      )}
+        <button className='btn-primary' onClick={() => handleNavigate('/dashboard')}>
+          Get Started
+        </button>
         <button className='btn-secondary'>Learn More</button>
         </div>
       

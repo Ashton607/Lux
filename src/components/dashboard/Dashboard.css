@@ -1,3 +1,7 @@
+body {
+  overflow-x: hidden;
+}
+
 .header{
     display: flex;
     justify-content: space-between;
@@ -8,6 +12,7 @@
     width: 30px;
     height: 30px;
     margin-bottom: -2px;
+    animation: appear 2.5s cubic-bezier(0.34, 2.8, 0.64, 1) forwards;
 }
 
 .header ul{
@@ -17,27 +22,78 @@
     margin-right: 10px;
 }
 
+.header ul li{
+    animation: appear 2.5s cubic-bezier(0.34, 2.8, 0.64, 1) forwards;
+    opacity: 0;
+}
+
+.header ul li:nth-child(1){
+    animation-delay: 0.2s;
+}
+.header ul li:nth-child(2){
+    animation-delay: 0.4s;
+}
+.header ul li:nth-child(3){
+    animation-delay: 0.6s;
+}
+.header ul li:nth-child(4){
+    animation-delay: 0.8s;
+}
+.header ul li:nth-child(5){
+    animation-delay: 1s;
+}
+.dots{
+  background: none;
+  backdrop-filter: blur(10px);
+  box-shadow: 
+  0 2px 4px rgba(0, 0, 0, 0.8),
+  0 8px 16px rgba(0, 0, 0, 0.6),
+  0 20px 40px rgba(0, 0, 0, 0.4),
+  0 -1px 4px rgba(255, 255, 255, 0.05) inset;
+  border-radius: 15px;
+  padding: 2px 0;
+  width: 80px;
+  height: 20px;
+}
+
 .dot {
   width: 10px;
   height: 10px;
-  border-radius: 50%;
-  background: #fff;
-  opacity: 0.5;
   display: inline-block;
-  margin: 0 5px;
+  margin: 0 8px;
   cursor: pointer;
+  background: black;
+  border-radius: 50%;
+  opacity: 0.5;
 }
 
 .dot.active {
   opacity: 1;
-  background: #8b0000;
+  background: teal;
+  border-radius: 50%;
 }
 
 .slides-footer {
   display: flex;
   justify-content: center;
   position: absolute;
-  bottom: 90px;
+  bottom: 50px;
   left: 50%;
   transform: translateX(-50%);
+  gap: 10px;
+}
+
+.slides-footer button{
+  display: none;
+}
+
+@keyframes appear {
+  0%  { 
+       opacity: 0;
+       transform: scale(1.28); 
+      }
+  100% {
+        transform:scale(1);
+        opacity: 1;
+        }
 }
