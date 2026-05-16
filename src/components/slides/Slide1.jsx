@@ -12,9 +12,6 @@ import art from '../../assets/Art-amico.svg'
 
 
 const Slide1 = () => {
-  
-
-
   return (
     <div>
        <div className="slide1-container">

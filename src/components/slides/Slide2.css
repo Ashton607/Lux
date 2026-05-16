@@ -1,0 +1,230 @@
+.slide2-container {
+  width: 100%;
+  height: 500px;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.slide2-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.slide2-header h2 {
+  font-size: 1.8rem;
+  color: #111;
+  margin: 0 0 6px 0;
+}
+
+.slide2-header p {
+  color: #666;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.slide2-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  width: 100%;
+}
+
+/* Left and right labels */
+.left-labels,
+.right-labels {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 200px;
+}
+
+.left-labels {
+  text-align: right;
+  margin-top: 80px;
+  margin-right: auto;
+}
+
+.left-labels .label:first-child{
+    background: #64a8a8;
+    padding: 10px 10px;
+    text-align: left;
+    border-radius: 8px;
+    color: #003535;
+}
+
+.left-labels .label:last-child{
+    background: #3a9999;
+    padding: 10px 10px;
+    text-align: left;
+    border-radius: 8px;
+    color: #011a1a;
+}
+
+
+.right-labels {
+  text-align: left;
+  margin-bottom: 80px;
+  margin-left: auto;
+}
+
+.right-labels .label:first-child{
+    background: #adffa2;
+    padding: 10px 10px;
+    text-align: right;
+    border-radius: 8px;
+    color: #0a5300;
+}
+
+.right-labels .label:last-child{
+    background: #64a8a2;
+    padding: 10px 10px;
+    text-align: right;
+    border-radius: 8px;
+    color: #003535;
+}
+
+.label h4 {
+  font-size: 0.99rem;
+  font-weight: 700;
+  margin: 0 0 4px 0;
+}
+
+.label p {
+  font-size: 0.8rem;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Center stacked cards */
+.center-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.benefit-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 180px;
+  height: 70px;
+  border-radius: 8px;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.benefit-card:hover {
+  transform: scale(1.05);
+}
+
+.benefit-card .number {
+  position: absolute;
+  right: -40px;
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #2d6a6a;
+}
+
+.benefit-card:nth-child(odd) .number {
+  right: auto;
+  left: -40px;
+  color: #2d6a6a;
+}
+
+.green     { background: #5cb85c; }
+.teal      { background: #2d9b9b; }
+.dark-teal { background: #1a7a7a; }
+.dark      { background: #0d4d4d; }
+
+/* Left labels - line points right */
+.left-labels .label {
+  position: relative;
+}
+
+.left-labels .label::after {
+  content: '';
+  position: absolute;
+  right: -380px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 175%;
+  height: 2px;
+}
+
+.left-labels .label:first-child::after{
+  background: #2d9b9b;
+}
+
+.left-labels .label:last-child::after{
+  background: #0d4d4d;
+}
+
+/* Circle dot at the end of the line */
+.left-labels .label::before {
+  content: '';
+  position: absolute;
+  right: -30px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.left-labels .label:first-child::before{
+  background: #2d9b9b;
+}
+.left-labels .label:last-child::before{
+  background: #0d4d4d;
+}
+
+
+
+/* Right labels - line points left */
+.right-labels .label {
+  position: relative;
+}
+
+.right-labels .label::after {
+  content: '';
+  position: absolute;
+  left: -365px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 165%;
+  height: 2px;
+}
+
+.right-labels .label:first-child::after{
+  background: #5cb85c;
+}
+.right-labels .label:last-child::after{
+  background: #64a8a2;
+}
+
+.right-labels .label::before {
+  content: '';
+  position: absolute;
+  left: -38px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.right-labels .label:first-child::before{
+  background: #5cb85c;
+}
+.right-labels .label:last-child::before{
+  background: #1a7a7a;
+}
