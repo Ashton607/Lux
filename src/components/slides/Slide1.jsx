@@ -5,9 +5,6 @@ import love from '../../assets/loveSVG.svg'
 import Idea from '../../assets/Ideas.svg'
 import interact from '../../assets/interact.svg'
 import bulb from '../../assets/idea.svg'
-import rose from '../../assets/rose.svg'
-import valentine1 from '../../assets/Valentine.svg'
-import cherry from '../../assets/cherry.svg'
 import art from '../../assets/Art-amico.svg'
 
 
