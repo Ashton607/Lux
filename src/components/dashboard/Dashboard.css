@@ -45,11 +45,6 @@ body {
 .dots{
   background: none;
   backdrop-filter: blur(10px);
-  box-shadow: 
-  0 2px 4px rgba(0, 0, 0, 0.8),
-  0 8px 16px rgba(0, 0, 0, 0.6),
-  0 20px 40px rgba(0, 0, 0, 0.4),
-  0 -1px 4px rgba(255, 255, 255, 0.05) inset;
   border-radius: 15px;
   padding: 2px 0;
   width: 80px;
@@ -96,4 +91,44 @@ body {
         transform:scale(1);
         opacity: 1;
         }
+}
+
+
+
+@media (max-width: 480px){
+  .header ul{
+    display: none;
+  }
+  .header img{
+    display: none;
+  }
+  .dots{
+    position:absolute;
+    bottom: -310px;
+      box-shadow: 
+  0 2px 4px rgba(0, 0, 0, 0.8),
+  0 8px 16px rgba(0, 0, 0, 0.6),
+  0 20px 40px rgba(0, 0, 0, 0.4),
+  0 -1px 4px rgba(255, 255, 255, 0.05) inset;
+
+  }
+}
+
+@media (max-width: 400px){
+  .header ul{
+    display: none;
+  }
+  .header img{
+    display: none;
+  }
+  .dots{
+    position:absolute;
+    bottom: -360px;
+      box-shadow: 
+  0 2px 4px rgba(0, 0, 0, 0.8),
+  0 8px 16px rgba(0, 0, 0, 0.6),
+  0 20px 40px rgba(0, 0, 0, 0.4),
+  0 -1px 4px rgba(255, 255, 255, 0.05) inset;
+
+  }
 }
