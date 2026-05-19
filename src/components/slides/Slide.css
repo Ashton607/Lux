@@ -55,13 +55,13 @@
 }
 
 .card1 {
-    animation-delay: 0.9s;
+    animation-delay: 0.2s;
 }
 .card2 {
-    animation-delay: 0.6s;
+    animation-delay: 0.4s;
 }
 .card3 {
-    animation-delay: 0.3s;
+    animation-delay: 0.6s;
 }
 
 .card1 img,
@@ -81,9 +81,10 @@
 .card1 p,
 .card2 p,
 .card3 p{
-    font-size: 12px;
+    font-size: 11px;
     margin-top: -10px;
-    color: rgb(201, 201, 201);
+    color: rgb(245, 245, 245);
+    font-weight: 600;
 }
 
 .card2 h3 span img{

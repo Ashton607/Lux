@@ -13,9 +13,60 @@ const Dashboard = () => {
 ];
 
 const [current, setCurrent] = useState(0);
-
 const prev = () => setCurrent(current === 0 ? slides.length - 1 : current - 1);
 const next = () => setCurrent(current === slides.length - 1 ? 0 : current + 1);
+const [touchStart, setTouchStart] = useState(null);
+const [touchEnd, setTouchEnd] = useState(null);
+const [paused, setPaused] = useState(false);
+
+
+{/* Touch event handlers-to swipe to the next/previous slide */}
+const handleTouchStart = (e) => {
+  setTouchStart(e.targetTouches[0].clientX);
+};
+
+const handleTouchMove = (e) => {
+  setTouchEnd(e.targetTouches[0].clientX);
+};
+
+
+{/* Auto-play functionality: change slides automatically */}
+useEffect(() => {
+  if (paused) return;
+
+  const autoPlay = setInterval(() => {
+    setCurrent(prev => prev === slides.length - 1 ? 0 : prev + 1);
+  }, 15000);
+
+  return () => clearInterval(autoPlay);
+}, [paused]);
+
+const handleTouchEnd = () => {
+  if (!touchStart || !touchEnd) return;
+
+  const distance = touchStart - touchEnd;
+  const minSwipeDistance = 50;
+
+  if (distance > minSwipeDistance) {
+    next();
+  } else if (distance < -minSwipeDistance) {
+    prev();
+  }
+
+  // pause autoplay for 5 seconds after swipe then resume
+  setPaused(true);
+  setTimeout(() => setPaused(false), 5000);
+
+  setTouchStart(null);
+  setTouchEnd(null);
+};
+
+
+
+
+
+
+
   return (
     <div>
     
@@ -31,7 +82,7 @@ const next = () => setCurrent(current === slides.length - 1 ? 0 : current + 1);
       </div>
 
       <div className="advert-container">
-        <div className="slides">
+        <div className="slides" onTouchStart={handleTouchStart} onTouchMove={handleTouchMove} onTouchEnd={handleTouchEnd}>
         {slides[current].content}
         <div className="slides-footer">
         <button onClick={prev}>←</button>
