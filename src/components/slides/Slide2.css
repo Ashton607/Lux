@@ -245,9 +245,10 @@
 
 @media (max-width: 480px) {
   .slide2-container {
-    height: auto;
+    height: 89vh;
     padding: 30px 16px;
     margin-top: 50px;
+    
   }
 
   .slide2-header h2 {

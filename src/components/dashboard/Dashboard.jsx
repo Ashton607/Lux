@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import './Dashboard.css'
-import Lux from '../../assets/Lux logo.svg'
 import Slide1 from '../slides/Slide1';
 import Slide2 from '../slides/Slide2';
 import Slide3 from '../slides/Slide3';
@@ -71,7 +70,6 @@ const handleTouchEnd = () => {
     <div>
     
       <div className="header">
-        <img src={Lux} alt="Lux Logo"/>
         <ul>
             <li>About</li>
             <li>Services</li>
@@ -97,13 +95,132 @@ const handleTouchEnd = () => {
 
      </div>
 
-      <div className="container1">
+    <div className="container1">
+      <h2>Crafting Digital Experiences</h2>
+      <p>Transform your special moments into beautifully crafted digital experiences where creativity meets elegance.
+    From intimate celebrations to grand events, Lux combines storytelling,
+    animation, and modern design to create unforgettable interactive moments.
+      </p>
 
+  <div className="packages">
+    <div className="package1">
+      <span className="pkg-icon">🌐</span>
+      <h3>Fullstack Digital Platforms</h3>
+      <p>Complete web application with backend, database, and authentication</p>
+      <p className="price">R5,000 - R15,000</p>
+      <ul>
+        <li>Custom Backend</li>
+        <li>Database Integration</li>
+        <li>User Authentication</li>
+      </ul>
+    </div>
+
+    <div className="package2">
+      <span className="pkg-icon">🎨</span>
+      <h3>Responsive Digital Platforms</h3>
+      <p>Beautiful, responsive frontend with modern design and animations</p>
+      <p className="price">R2,500 - R5,000</p>
+      <ul>
+        <li>Responsive Design</li>
+        <li>Modern UI/UX</li>
+        <li>Animations</li>
+        <li>SEO Optimized</li>
+      </ul>
+      </div>
+
+    <div className="package3">
+      <span className="pkg-icon">🪶📜</span>
+      <h3>Creative Storytelling Experiences</h3>
+      <p>Single page design with clean code and fast loading</p>
+      <p className="price">R100 - R500</p>
+      <ul>
+        <li>Clean Code</li>
+        <li>Fast Loading</li>
+        <li>Mobile Friendly</li>
+        <li>Custom Design</li>
+       </ul>
+      </div>
+      </div>
       </div>
 
       <div className="about">
+  <h2>Our Work by Occasion</h2>
+  <p>Real examples of websites we've crafted for life's special moments. Each designed with care
+    and attention to detail.
+  </p>
 
+  <div className="work-grid">
+
+    <div className="work-card">
+      <div className="work-img work1-img">
+        <div className="work-label">
+          <span className="work-icon">🎂</span>
+          <h3>Birthday Celebrations</h3>
+        </div>
       </div>
+      <div className="work-info">
+        <p>Interactive party invitations with RSVP tracking, photo galleries, and countdown timers</p>
+        <div className="work-tags">
+          <span>RSVP System</span>
+          <span>Photo Gallery</span>
+          <span>Countdown Timer</span>
+        </div>
+      </div>
+    </div>
+
+    <div className="work-card">
+      <div className="work-img work2-img">
+        <div className="work-label">
+          <span className="work-icon">🏠</span>
+          <h3>Wedding Websites</h3>
+        </div>
+      </div>
+      <div className="work-info">
+        <p>Elegant wedding sites with ceremony details, registry integration, and guest management</p>
+        <div className="work-tags">
+          <span>Registry Integration</span>
+          <span>Guest Lists</span>
+          <span>Interactive Maps</span>
+        </div>
+      </div>
+    </div>
+
+    <div className="work-card">
+      <div className="work-img work3-img">
+        <div className="work-label">
+          <span className="work-icon">✉️</span>
+          <h3>Event Invitations</h3>
+        </div>
+      </div>
+      <div className="work-info">
+        <p>Digital invitations for corporate events, conferences, and special gatherings</p>
+        <div className="work-tags">
+          <span>Custom Designs</span>
+          <span>Email Integration</span>
+          <span>Analytics</span>
+        </div>
+      </div>
+    </div>
+
+    <div className="work-card">
+      <div className="work-img work4-img">
+        <div className="work-label">
+          <span className="work-icon">🤍</span>
+          <h3>Romantic Gestures</h3>
+        </div>
+      </div>
+      <div className="work-info">
+        <p>Personalized love letters, anniversary timelines, and surprise reveal pages</p>
+        <div className="work-tags">
+          <span>Custom Animations</span>
+          <span>Interactive Stories</span>
+          <span>Private Access</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
 
       <div className="pricing">
 
