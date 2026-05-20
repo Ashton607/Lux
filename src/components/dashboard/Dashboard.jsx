@@ -3,6 +3,7 @@ import './Dashboard.css'
 import Slide1 from '../slides/Slide1';
 import Slide2 from '../slides/Slide2';
 import Slide3 from '../slides/Slide3';
+import {Info, ArrowRight } from 'lucide-react';
 
 const Dashboard = () => {
   const slides = [
@@ -95,6 +96,9 @@ const handleTouchEnd = () => {
 
      </div>
 
+
+     {/*Packages Section*/}
+
     <div className="container1">
       <h2>Crafting Digital Experiences</h2>
       <p>Transform your special moments into beautifully crafted digital experiences where creativity meets elegance.
@@ -105,45 +109,57 @@ const handleTouchEnd = () => {
   <div className="packages">
     <div className="package1">
       <span className="pkg-icon">🌐</span>
-      <h3>Fullstack Digital Platforms</h3>
-      <p>Complete web application with backend, database, and authentication</p>
-      <p className="price">R5,000 - R15,000</p>
+      <h3>Prestige</h3>
+      <p>full stack digital platforms engineered for creativity,precision, and seamless user experience
+         Best for startups, growing businesses, and custom web applications requiring backend systems, 
+         databases, and authentication.
+         <br />
+         <br />
+      </p>
+      <hr />
       <ul>
-        <li>Custom Backend</li>
-        <li>Database Integration</li>
-        <li>User Authentication</li>
+        <li>Full Stack Web Application</li>
+        <li>Database Integration And Management</li>
+        <li>API Integration</li>
+        <li>Responsive Design</li>
       </ul>
     </div>
 
     <div className="package2">
       <span className="pkg-icon">🎨</span>
-      <h3>Responsive Digital Platforms</h3>
-      <p>Beautiful, responsive frontend with modern design and animations</p>
-      <p className="price">R2,500 - R5,000</p>
+      <h3>Professional</h3>
+      <p>Modern interactive frontend experiences designed for brands, events, and businesses.
+         Ideal for business landing pages, wedding invitations, portfolios, product showcases, and immersive event experiences that combine elegant UI/UX with visually engaging animations.</p>
+      <hr />
       <ul>
         <li>Responsive Design</li>
         <li>Modern UI/UX</li>
         <li>Animations</li>
         <li>SEO Optimized</li>
+        <li>Elegant Visual Storytelling</li>
       </ul>
       </div>
 
     <div className="package3">
       <span className="pkg-icon">🪶📜</span>
-      <h3>Creative Storytelling Experiences</h3>
-      <p>Single page design with clean code and fast loading</p>
-      <p className="price">R100 - R500</p>
+      <h3>Essential</h3>
+      <p>Beautiful single-page digital experiences crafted for personal moments and creative expression.
+         Perfect for romantic gestures, birthday surprises, digital letters, invitations, and visually immersive personal pages designed with elegant animations and stunning responsive visuals.</p>
+      <hr />
       <ul>
-        <li>Clean Code</li>
-        <li>Fast Loading</li>
-        <li>Mobile Friendly</li>
-        <li>Custom Design</li>
+        <li>Custom HTML/CSS design</li>
+        <li>Responsive mobile-friendly layout</li>
+        <li>Smooth animations and transitions</li>
+        <li>Personalized visual styling</li>
        </ul>
       </div>
       </div>
       </div>
 
-      <div className="about">
+
+
+    {/*Our Work Section*/}
+    <div className="about">
   <h2>Our Work by Occasion</h2>
   <p>Real examples of websites we've crafted for life's special moments. Each designed with care
     and attention to detail.
@@ -154,16 +170,17 @@ const handleTouchEnd = () => {
     <div className="work-card">
       <div className="work-img work1-img">
         <div className="work-label">
-          <span className="work-icon">🎂</span>
-          <h3>Birthday Celebrations</h3>
+          <span className="work-icon">💼</span>
+          <h3>Businesses</h3>
         </div>
       </div>
       <div className="work-info">
-        <p>Interactive party invitations with RSVP tracking, photo galleries, and countdown timers</p>
+        <p>A traditional, multi-page website that acts as a digital profile for your company.</p>
+        <br />
         <div className="work-tags">
-          <span>RSVP System</span>
-          <span>Photo Gallery</span>
-          <span>Countdown Timer</span>
+          <span>Brochure Website</span>
+          <span>Landing Page</span>
+          <span>Single Page Application</span>
         </div>
       </div>
     </div>
@@ -171,15 +188,15 @@ const handleTouchEnd = () => {
     <div className="work-card">
       <div className="work-img work2-img">
         <div className="work-label">
-          <span className="work-icon">🏠</span>
-          <h3>Wedding Websites</h3>
+          <span className="work-icon">⛪</span>
+          <h3>Weddings & Anniversaries</h3>
         </div>
       </div>
       <div className="work-info">
-        <p>Elegant wedding sites with ceremony details, registry integration, and guest management</p>
+        <p>Elegant digital wedding & anniversary experiences designed to celebrate love with RSVP functionality, creative storytelling, and interactive maps</p>
         <div className="work-tags">
-          <span>Registry Integration</span>
-          <span>Guest Lists</span>
+          <span>RSVP Functionality</span>
+          <span>Invitations</span>
           <span>Interactive Maps</span>
         </div>
       </div>
@@ -189,15 +206,15 @@ const handleTouchEnd = () => {
       <div className="work-img work3-img">
         <div className="work-label">
           <span className="work-icon">✉️</span>
-          <h3>Event Invitations</h3>
+          <h3>Events</h3>
         </div>
       </div>
       <div className="work-info">
-        <p>Digital invitations for corporate events, conferences, and special gatherings</p>
+        <p>Digital invitations for corporate events, conferences, special gatherings, graduations, matric dances and church events</p>
         <div className="work-tags">
-          <span>Custom Designs</span>
-          <span>Email Integration</span>
-          <span>Analytics</span>
+          <span>Posters</span>
+          <span>Landing Page</span>
+          <span>Invitations</span>
         </div>
       </div>
     </div>
@@ -205,7 +222,7 @@ const handleTouchEnd = () => {
     <div className="work-card">
       <div className="work-img work4-img">
         <div className="work-label">
-          <span className="work-icon">🤍</span>
+          <span className="work-icon">💗</span>
           <h3>Romantic Gestures</h3>
         </div>
       </div>
@@ -214,7 +231,25 @@ const handleTouchEnd = () => {
         <div className="work-tags">
           <span>Custom Animations</span>
           <span>Interactive Stories</span>
-          <span>Private Access</span>
+          <span>Love letters</span>
+        </div>
+      </div>
+    </div>
+
+    <div className="work-card">
+      <div className="work-img work5-img">
+        <div className="work-label">
+          <span className="work-icon">🎂</span>
+          <h3>Birthday Celebrations</h3>
+        </div>
+      </div>
+      <div className="work-info">
+        <p>Interactive party invitations with RSVP tracking, photo galleries,birthday letters and countdown timers</p>
+        <br />
+        <div className="work-tags">
+          <span>Photo Gallery</span>
+          <span>Invitations</span>
+          <span>Posters</span>
         </div>
       </div>
     </div>
@@ -222,12 +257,67 @@ const handleTouchEnd = () => {
   </div>
 </div>
 
-      <div className="pricing">
 
-      </div>
+      {/*Quotes Section*/}
+      <div className="quotes-container">
+        <h2>What's Included</h2>
+        <p>Understanding the difference between our service tiers to help you choose the perfect fit for your needs.</p>
 
-      <div className="container2">
+        <div className="quotes">
+          <div className="qte1">
+            <span className="qte-icon">❝</span>
+            <h3>Prestige</h3>
+            <p>fullstack</p>
+            <ul>
+              <li>Startup Businesses</li>
+              <li>Corporate Businesses</li>
+              <li>Local Businesses</li>
+            </ul>
+            <button className="get-quote-btn">
+             Get Quote <ArrowRight size={14} />
+            </button>
+          </div>
 
+          <div className="qte2">
+            <span className="qte-icon">❝</span>
+            <h3>Professional</h3>
+            <p>fullstack</p>
+            <ul>
+              <li>Businesses</li>
+              <li>Weddings</li>
+              <li>Anniversaries</li>
+              <li>Romantic Gestures</li>
+              <li>Birthday Celebrations</li>
+              <li>Events</li>
+            </ul>
+            <button className="get-quote-btn">
+             Get Quote <ArrowRight size={14} />
+            </button>
+          </div>
+
+          <div className="qte3">
+            <span className="qte-icon">❝</span>
+            <h3>Essential</h3>
+            <p>fullstack</p>
+            <ul>
+              <li>Birthday Celebrations</li>
+              <li>Romantic Gestures</li>
+              <li>Anniversaries</li>
+              <li>Events</li>
+            </ul>
+            <button className="get-quote-btn">
+             Get Quote <ArrowRight size={14} />
+            </button>
+          </div>
+
+        </div>
+         <div className="disclaimer">
+            <p><Info size={15}/>The examples above showcase ideal use cases for each package tier 
+            and are not limited to specific project types. 
+            Each package is flexible and can be tailored to suit your unique vision, goals, 
+            and creative requirements.</p>
+          </div>
+        
       </div>
 
     </div>
