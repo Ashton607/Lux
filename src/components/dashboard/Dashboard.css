@@ -72,8 +72,6 @@ body {
 
 .slides-footer button {
   background: rgba(255, 255, 255, 0.3);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
   border: 1px solid rgba(255, 255, 255, 0.4);
   border-radius: 50%;
   width: 36px;
@@ -103,8 +101,6 @@ body {
   align-items: center;
   gap: 6px;
   background: rgba(255, 255, 255, 0.3);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
   border-radius: 20px;
   padding: 6px 12px;
   box-shadow:
@@ -477,6 +473,35 @@ body {
   gap: 12px;
   border: 1px solid rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(4px);
+  transition: all 0.9s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.qte1:hover,
+.qte2:hover,
+.qte3:hover {
+  transform: translateY(-15px);
+  transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.qte2{
+  position: relative;
+}
+
+.popular-badge {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(75deg, #1E1D40, #FF9A8B);
+  color: #ffffff;
+  padding: 4px 16px;
+  border-radius: 999px; 
+  font-size: 14px;
+  font-weight: 500;
+}
+.popular-badge svg {
+  margin-bottom: 2px;
+  color: #ffc996;
 }
 
 .qte1 p,
@@ -632,6 +657,38 @@ body {
 
   }
 
+  .slides {
+    min-height: 100vh;
+  }
+
+  .slides-footer {
+    position: absolute;
+    bottom: 16px;
+    left: 0;
+    right: 0;
+    transform: none;
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+
+  .slides-footer button {
+    display: flex;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    box-shadow: none;
+    color: #007755;
+    width: auto;
+    height: auto;
+  }
+
+  .dots {
+    position: absolute;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
   .container1{
     margin-top: 0px;
   }
@@ -650,6 +707,10 @@ body {
 
   .work-grid {
     grid-template-columns: 1fr;
+  }
+  .work-card {
+    width: 125%;
+    margin: 0 -35px;
   }
 
   .quotes-container {
@@ -674,7 +735,7 @@ body {
   .qte2,
   .qte3 {
     max-width: 100%;
-    width: 100%;
+    width: 90%;
   }
 
   .qte1{

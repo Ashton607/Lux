@@ -140,7 +140,7 @@
 
   .content .art-bg {
     width: 100%;
-    top: 10%;
+    top: -30%;
     left: 0%;
     transform: translateX(-50%);
   }

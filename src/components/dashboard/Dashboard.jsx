@@ -3,7 +3,7 @@ import './Dashboard.css'
 import Slide1 from '../slides/Slide1';
 import Slide2 from '../slides/Slide2';
 import Slide3 from '../slides/Slide3';
-import {Info, ArrowRight } from 'lucide-react';
+import {Info, ArrowRight,Star } from 'lucide-react';
 
 const Dashboard = () => {
   const slides = [
@@ -108,7 +108,7 @@ const handleTouchEnd = () => {
 
   <div className="packages">
     <div className="package1">
-      <span className="pkg-icon">🌐</span>
+      <span className="pkg-icon">✨</span>
       <h3>Prestige</h3>
       <p>full stack digital platforms engineered for creativity,precision, and seamless user experience
          Best for startups, growing businesses, and custom web applications requiring backend systems, 
@@ -147,7 +147,7 @@ const handleTouchEnd = () => {
       </div>
 
     <div className="package3">
-      <span className="pkg-icon">🪶📜</span>
+      <span className="pkg-icon">🍃</span>
       <h3>Essential</h3>
       <p>Beautiful single-page digital experiences crafted for personal moments and creative expression.
          Perfect for romantic gestures, birthday surprises, digital letters, invitations, and visually immersive personal pages designed with elegant animations and stunning responsive visuals.</p>
@@ -274,7 +274,7 @@ const handleTouchEnd = () => {
 
         <div className="quotes">
           <div className="qte1">
-            <span className="qte-icon">❝</span>
+            <span className="qte-icon">✨</span>
             <h3>Prestige</h3>
             <p>Fullstack digital platforms designed for growing businesses, startups, and 
               powerful online experiences built for web applications with user authenticationm, databases
@@ -291,7 +291,8 @@ const handleTouchEnd = () => {
           </div>
 
           <div className="qte2">
-            <span className="qte-icon">❝</span>
+            <div className="popular-badge">Popular<Star size={18}/></div>
+            <span className="qte-icon">🎨</span>
             <h3>Professional</h3>
             <p>Beautifully crafted interactive experiences combining modern design, 
               immersive visuals, and seamless user interaction for brands, events, 
@@ -311,7 +312,7 @@ const handleTouchEnd = () => {
           </div>
 
           <div className="qte3">
-            <span className="qte-icon">❝</span>
+            <span className="qte-icon">🍃</span>
             <h3>Essential</h3>
             <p>Elegant single-page digital experiences designed to turn personal moments, 
               celebrations, and creative ideas into visually memorable experiences.</p>

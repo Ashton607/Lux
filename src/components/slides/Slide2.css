@@ -13,6 +13,8 @@
 .slide2-header {
   text-align: center;
   margin-bottom: 30px;
+  animation: fadeInDown 0.8s ease forwards;
+  opacity: 0;
 }
 
 .slide2-header h2 {
@@ -57,7 +59,8 @@
     text-align: left;
     border-radius: 8px;
     color: #50002f;
-    
+    animation: slideInLeft 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) 0.3s forwards;
+    opacity: 0;
 }
 
 .left-labels .label:last-child{
@@ -66,6 +69,8 @@
     text-align: left;
     border-radius: 8px;
     color: #000000;
+    animation: slideInLeft 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) 0.5s forwards;
+    opacity: 0;
 }
 
 .label-icon {
@@ -89,6 +94,8 @@
     text-align: right;
     border-radius: 8px;
     color: #470012;
+    animation: slideInRight 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) 0.3s forwards;
+    opacity: 0;
 }
 
 .right-labels .label:last-child{
@@ -97,6 +104,8 @@
     text-align: right;
     border-radius: 8px;
     color: #073d00;
+    animation: slideInRight 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) 0.5s forwards;
+    opacity: 0;
 }
 
 .label h4 {
@@ -128,6 +137,25 @@
   position: relative;
   cursor: pointer;
   transition: transform 0.2s ease;
+}
+.benefit-card:nth-child(1) {
+  animation: popIn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) 0.2s forwards;
+  opacity: 0;
+}
+
+.benefit-card:nth-child(2) {
+  animation: popIn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) 0.35s forwards;
+  opacity: 0;
+}
+
+.benefit-card:nth-child(3) {
+  animation: popIn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) 0.5s forwards;
+  opacity: 0;
+}
+
+.benefit-card:nth-child(4) {
+  animation: popIn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) 0.65s forwards;
+  opacity: 0;
 }
 
 .benefit-card:hover {
@@ -237,6 +265,38 @@
 }
 .right-labels .label:last-child::before{
   background: #5cb85c;
+}
+
+.left-labels .label,
+.right-labels .label {
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
+              box-shadow 0.3s ease;
+}
+
+.left-labels .label:hover,
+.right-labels .label:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes fadeInDown {
+  0%   { opacity: 0; transform: translateY(-20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInLeft {
+  0%   { opacity: 0; transform: translateX(-40px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+  0%   { opacity: 0; transform: translateX(40px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes popIn {
+  0%   { opacity: 0; transform: scale(0.8); }
+  100% { opacity: 1; transform: scale(1); }
 }
 
 
