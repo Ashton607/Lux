@@ -62,9 +62,24 @@ const handleTouchEnd = () => {
 };
 
 
+useEffect(() => {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      const elements = entry.target.querySelectorAll('.work-label h3, .work-info p, .work-tags span');
 
+      if (entry.isIntersecting) {
+        elements.forEach(el => el.classList.add('animate-slide-in'));
+      } else {
+        elements.forEach(el => el.classList.remove('animate-slide-in'));
+      }
+    });
+  }, { threshold: 0.1 });
 
+  const workCards = document.querySelectorAll('.work-card');
+  workCards.forEach(card => observer.observe(card));
 
+  return () => observer.disconnect();
+}, []);
 
 
   return (
@@ -141,7 +156,7 @@ const handleTouchEnd = () => {
         <li>SEO Optimized</li>
         <li>Elegant Visual Storytelling</li>
       </ul>
-      <button className="visit-site">
+      <button className="visit-site" onClick={() => window.open('https://ashton607.github.io/Foundation/', '_blank')}>
         Visit Site <ArrowRight size={14} />
       </button>
       </div>
@@ -158,7 +173,7 @@ const handleTouchEnd = () => {
         <li>Smooth animations and transitions</li>
         <li>Personalized visual styling</li>
        </ul>
-       <button className="visit-site">
+       <button className="visit-site" onClick={() => window.open('https://luxloveletter.netlify.app', '_blank')}>
         Visit Site <ArrowRight size={14} />
       </button>
       </div>
