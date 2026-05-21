@@ -1,6 +1,6 @@
 .slide3-container {
   position: relative;
-  height: 89vh;
+  min-height: 89vh;
   display: flex;
   align-items: center;
   justify-content: space-between;

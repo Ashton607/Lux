@@ -123,6 +123,9 @@ const handleTouchEnd = () => {
         <li>API Integration</li>
         <li>Responsive Design</li>
       </ul>
+      <button className="visit-site">
+        Visit Site <ArrowRight size={14} />
+      </button>
     </div>
 
     <div className="package2">
@@ -138,6 +141,9 @@ const handleTouchEnd = () => {
         <li>SEO Optimized</li>
         <li>Elegant Visual Storytelling</li>
       </ul>
+      <button className="visit-site">
+        Visit Site <ArrowRight size={14} />
+      </button>
       </div>
 
     <div className="package3">
@@ -152,6 +158,9 @@ const handleTouchEnd = () => {
         <li>Smooth animations and transitions</li>
         <li>Personalized visual styling</li>
        </ul>
+       <button className="visit-site">
+        Visit Site <ArrowRight size={14} />
+      </button>
       </div>
       </div>
       </div>
@@ -267,7 +276,10 @@ const handleTouchEnd = () => {
           <div className="qte1">
             <span className="qte-icon">❝</span>
             <h3>Prestige</h3>
-            <p>fullstack</p>
+            <p>Fullstack digital platforms designed for growing businesses, startups, and 
+              powerful online experiences built for web applications with user authenticationm, databases
+              & API integration.</p>
+              <hr />
             <ul>
               <li>Startup Businesses</li>
               <li>Corporate Businesses</li>
@@ -281,7 +293,10 @@ const handleTouchEnd = () => {
           <div className="qte2">
             <span className="qte-icon">❝</span>
             <h3>Professional</h3>
-            <p>fullstack</p>
+            <p>Beautifully crafted interactive experiences combining modern design, 
+              immersive visuals, and seamless user interaction for brands, events, 
+              and creative projects</p>
+              <hr />
             <ul>
               <li>Businesses</li>
               <li>Weddings</li>
@@ -298,7 +313,9 @@ const handleTouchEnd = () => {
           <div className="qte3">
             <span className="qte-icon">❝</span>
             <h3>Essential</h3>
-            <p>fullstack</p>
+            <p>Elegant single-page digital experiences designed to turn personal moments, 
+              celebrations, and creative ideas into visually memorable experiences.</p>
+              <hr />
             <ul>
               <li>Birthday Celebrations</li>
               <li>Romantic Gestures</li>

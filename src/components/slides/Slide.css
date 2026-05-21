@@ -1,7 +1,6 @@
 .slide1-container{
     background: linear-gradient(105deg, #ffffff, #ffffff, #4d8f75,#ffffff, #ffffff);
-    height: 77vh;
-    margin-top: 10px;
+    min-height: 89vh;
 }
 
 .content .rose-bg{
