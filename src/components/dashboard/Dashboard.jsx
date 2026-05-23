@@ -3,7 +3,8 @@ import './Dashboard.css'
 import Slide1 from '../slides/Slide1';
 import Slide2 from '../slides/Slide2';
 import Slide3 from '../slides/Slide3';
-import {Info, ArrowRight,Star } from 'lucide-react';
+import {Info, ArrowRight,Star,X,Layers,House,MessageCircle } from 'lucide-react';
+import { createPortal } from "react-dom";
 
 const Dashboard = () => {
   const slides = [
@@ -18,6 +19,8 @@ const next = () => setCurrent(current === slides.length - 1 ? 0 : current + 1);
 const [touchStart, setTouchStart] = useState(null);
 const [touchEnd, setTouchEnd] = useState(null);
 const [paused, setPaused] = useState(false);
+const [isOpen, setIsOpen] = useState(false);
+const [isClosing, setIsClosing] = useState(false);
 
 
 {/* Touch event handlers-to swipe to the next/previous slide */}
@@ -61,7 +64,7 @@ const handleTouchEnd = () => {
   setTouchEnd(null);
 };
 
-
+{/*The our work section animiation when scrolling*/}
 useEffect(() => {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -82,16 +85,59 @@ useEffect(() => {
 }, []);
 
 
+const modalClick = () => {
+  setIsOpen(true);
+}
+
+const closePopup =()=>{
+setIsClosing(true);
+setTimeout(()=>{
+  setIsOpen(false);
+  setIsClosing(false)
+},300);
+} 
+
+
+
+const modal = createPortal(
+  <div 
+    className={`modalbackground ${isOpen || isClosing ? 'modalopen' : ''}`} 
+    onClick={closePopup}
+  >
+    <div 
+      className={`modalcontainer ${isOpen && !isClosing ? 'modalcontainerOpen' : ''} ${isClosing ? 'modalcontainerClose' : ''}`}
+      onClick={(e) => e.stopPropagation()}
+    >
+      <div className="modal-header">
+        <h3>Quotation</h3>
+        <button onClick={closePopup}>
+          <X size={18} />
+        </button>
+      </div>
+
+      <div className="modal-data">
+        <h3>Reach Out</h3>
+        <ul>
+          <li>WhatsApp</li>
+          <li>Gmail</li>
+          <li>Instagram</li>
+        </ul>
+      </div>
+    </div>
+  </div>,
+  document.body
+);
+
+
   return (
     <div>
-    
+      {modal}
       <div className="header">
         <ul>
-            <li>About</li>
-            <li>Services</li>
-            <li>Pricing</li>
-            <li>Trivea</li>
-            <li>Connect</li>
+            <li>Home<House /></li>
+            <li>Services<Layers /></li>
+            <li>About<Info /></li>
+            <li>Connect<MessageCircle /></li>
         </ul>
       </div>
 
@@ -192,7 +238,7 @@ useEffect(() => {
   <div className="work-grid">
 
     <div className="work-card">
-      <div className="work-img work1-img">
+      <div className="work-img work1-img" loading="lazy">
         <div className="work-label">
           <span className="work-icon">💼</span>
           <h3>Businesses</h3>
@@ -210,7 +256,7 @@ useEffect(() => {
     </div>
 
     <div className="work-card">
-      <div className="work-img work2-img">
+      <div className="work-img work2-img" loading="lazy">
         <div className="work-label">
           <span className="work-icon">⛪</span>
           <h3>Weddings & Anniversaries</h3>
@@ -227,7 +273,7 @@ useEffect(() => {
     </div>
 
     <div className="work-card">
-      <div className="work-img work3-img">
+      <div className="work-img work3-img" loading="lazy">
         <div className="work-label">
           <span className="work-icon">✉️</span>
           <h3>Events</h3>
@@ -244,7 +290,7 @@ useEffect(() => {
     </div>
 
     <div className="work-card">
-      <div className="work-img work4-img">
+      <div className="work-img work4-img" loading="lazy">
         <div className="work-label">
           <span className="work-icon">💗</span>
           <h3>Romantic Gestures</h3>
@@ -261,7 +307,7 @@ useEffect(() => {
     </div>
 
     <div className="work-card">
-      <div className="work-img work5-img">
+      <div className="work-img work5-img" loading="lazy">
         <div className="work-label">
           <span className="work-icon">🎂</span>
           <h3>Birthday Celebrations</h3>
@@ -300,7 +346,7 @@ useEffect(() => {
               <li>Corporate Businesses</li>
               <li>Local Businesses</li>
             </ul>
-            <button className="get-quote-btn">
+            <button className="get-quote-btn" onClick={modalClick}>
              Get Quote <ArrowRight size={14} />
             </button>
           </div>
@@ -321,7 +367,7 @@ useEffect(() => {
               <li>Birthday Celebrations</li>
               <li>Events</li>
             </ul>
-            <button className="get-quote-btn">
+            <button className="get-quote-btn" onClick={modalClick}>
              Get Quote <ArrowRight size={14} />
             </button>
           </div>
@@ -338,7 +384,7 @@ useEffect(() => {
               <li>Anniversaries</li>
               <li>Events</li>
             </ul>
-            <button className="get-quote-btn">
+            <button className="get-quote-btn" onClick={modalClick}>
              Get Quote <ArrowRight size={14} />
             </button>
           </div>
