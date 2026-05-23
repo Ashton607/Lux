@@ -5,6 +5,9 @@ import Slide2 from '../slides/Slide2';
 import Slide3 from '../slides/Slide3';
 import {Info, ArrowRight,Star,X,Layers,House,MessageCircle } from 'lucide-react';
 import { createPortal } from "react-dom";
+import { FaWhatsapp, FaInstagram } from 'react-icons/fa'
+import { SiGmail } from 'react-icons/si'
+import Footer from '../footer/Footer';
 
 const Dashboard = () => {
   const slides = [
@@ -116,11 +119,22 @@ const modal = createPortal(
       </div>
 
       <div className="modal-data">
-        <h3>Reach Out</h3>
+        <h3>Reach Out Directly</h3>
         <ul>
-          <li>WhatsApp</li>
-          <li>Gmail</li>
-          <li>Instagram</li>
+          <li onClick={() => window.open('https://wa.me/27788825777', '_blank')}>
+            <FaWhatsapp size={22} color="#25D366" />
+            <span>078-882-5777</span>
+          </li>
+
+          <li onClick={() => window.open('mailto:portmanashton4@gmail.com', '_blank')}>
+            <SiGmail size={22} color="#EA4335" />
+            <span>portmanashton4@gmail.com</span>
+          </li>
+
+          <li onClick={() => window.open('https://www.instagram.com/ashton.b_jordan', '_blank')}>
+            <FaInstagram size={22} color="#E1306C" />
+            <span>ashton.b_jordan</span>
+          </li>
         </ul>
       </div>
     </div>
@@ -398,7 +412,7 @@ const modal = createPortal(
           </div>
         
       </div>
-
+      <Footer />
     </div>
   )
 }
