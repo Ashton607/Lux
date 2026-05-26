@@ -7,7 +7,9 @@ import {Info, ArrowRight,Star,X,Layers,House,MessageCircle } from 'lucide-react'
 import { createPortal } from "react-dom";
 import { FaWhatsapp, FaInstagram } from 'react-icons/fa'
 import { SiGmail } from 'react-icons/si'
+import { TiThMenuOutline } from "react-icons/ti";
 import Footer from '../footer/Footer';
+import {Link} from 'react-scroll'
 
 const Dashboard = () => {
   const slides = [
@@ -142,17 +144,24 @@ const modal = createPortal(
   document.body
 );
 
+{/* Mobile Menu Toggle */}
+const [menuOpen, setMenuOpen] = useState(false);
+
+
 
   return (
     <div>
       {modal}
       <div className="header">
-        <ul>
-            <li>Home<House /></li>
-            <li>Services<Layers /></li>
-            <li>About<Info /></li>
-            <li>Connect<MessageCircle /></li>
+         <ul className={menuOpen ? 'show-mobile-menu' : ''}>
+            <li><Link to="advert-container"  smooth={true} offset={-70} duration={500}>Home<House /></Link></li>
+            <li><Link to="container1" smooth={true} offset={0} duration={500}>Services<Layers /></Link></li>
+            <li><Link to="about" smooth={true} offset={25} duration={500}>About<Info /></Link></li>
+            <li><Link to="quotes-container" smooth={true} offset={25} duration={500}>Connect<MessageCircle /></Link></li>
         </ul>
+        <span className="menu-icon" onClick={() => setMenuOpen(!menuOpen)}>
+        {menuOpen ? <X size={30} /> : <TiThMenuOutline size={24} />}
+        </span>
       </div>
 
       <div className="advert-container">

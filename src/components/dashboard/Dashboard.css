@@ -850,8 +850,21 @@ body {
   }
 }
 
+.menu-icon{
+  display:none;
+}
 
-
+.menu-close{
+    animation: spin 1.8s ease-in-out;
+}
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
 
 
 
@@ -862,9 +875,84 @@ body {
 
 
 @media (max-width: 480px){
-  .header ul{
-    display: none;
+  .header{
+    backdrop-filter:none;
+    margin-top: 0;
   }
+  .header ul {
+    position: fixed;
+    opacity: 0;
+    border-radius:12px;
+    background: radial-gradient(circle at top left, rgba(255, 252, 220, 0.9) 0%, rgba(255, 235, 238, 0.8) 60%, rgba(240, 230, 255, 0.7) 100%);
+    border: 1px solid rgba(255, 220, 235, 0.6);
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+    width: 200px;
+    padding-top: 60px;
+    padding-bottom: 10px;
+    margin: 0;
+    margin-top: -10px;
+    flex-direction: column;
+    
+  }
+  .header ul.show-mobile-menu {
+    right: 0;
+    opacity: 1;
+    transition: ease-in-out 0.5s;
+  }
+ 
+ 
+  .header ul li {
+    display: block;
+    padding: 10px 15px;
+    margin-left: 5px;
+    width: 90%;
+    border: 1px solid rgba(255, 220, 235, 0.849);
+    border-radius: 10px;
+    color: #000000;
+    opacity: 0;
+  }
+  .header ul.show-mobile-menu li{
+    animation: softPop 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  }
+  .header ul.show-mobile-menu li:nth-child(1){
+    animation-delay: 0.2s;
+  }
+  .header ul.show-mobile-menu li:nth-child(2){
+    animation-delay: 0.4s;
+  }
+  .header ul.show-mobile-menu li:nth-child(3){
+    animation-delay: 0.6s;
+  }
+  .header ul.show-mobile-menu li:nth-child(4){
+    animation-delay: 0.8s;
+  }
+
+
+   .header ul li:nth-child(1) svg {
+    margin-left: 30px;
+  }
+   .header ul li:nth-child(2) svg {
+    margin-left: 14px;
+ }
+   .header ul li:nth-child(3) svg {
+    margin-left: 30px;
+ }
+   .header ul li:nth-child(4) svg {
+    margin-left: 12px;
+ }
+ .header ul li:hover {
+    transform: none;
+    text-decoration: none;
+    background: none;
+  }
+  .menu-icon {
+    display: block;
+    cursor: pointer;
+    position: fixed;
+  }
+
+
   .header img{
     display: none;
   }
@@ -974,24 +1062,7 @@ body {
   }
 }
 
-@media (max-width: 400px){
-  .header ul{
-    display: none;
-  }
-  .header img{
-    display: none;
-  }
-  .dots{
-    position:absolute;
-    bottom: -360px;
-      box-shadow: 
-  0 2px 4px rgba(0, 0, 0, 0.8),
-  0 8px 16px rgba(0, 0, 0, 0.6),
-  0 20px 40px rgba(0, 0, 0, 0.4),
-  0 -1px 4px rgba(255, 255, 255, 0.05) inset;
 
-  }
-}
 
 @media (min-width: 481px) and (max-width: 768px) {
   .quotes-container {
