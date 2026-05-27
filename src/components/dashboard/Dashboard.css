@@ -906,7 +906,7 @@ body {
     display: block;
     padding: 10px 15px;
     margin-left: 5px;
-    width: 90%;
+    width: 80%;
     border: 1px solid rgba(255, 220, 235, 0.849);
     border-radius: 10px;
     color: #000000;
@@ -1012,7 +1012,34 @@ body {
     max-width: 100%;
     width: 100%;
   }
+   
 
+  .packages ul li:hover {
+    transform: none;
+    transition: none;
+    border-color: rgba(255, 220, 235, 0.6);
+    box-shadow: none;
+  }
+
+  .packages ul li.animate-slide-in{
+    animation: softPop 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    opacity: 0;
+  }
+
+  .packages ul li:nth-child(1).animate-slide-in { animation-delay: 0.2s; }
+  .packages ul li:nth-child(2).animate-slide-in { animation-delay: 0.4s; }
+  .packages ul li:nth-child(3).animate-slide-in { animation-delay: 0.6s; }
+  .packages ul li:nth-child(4).animate-slide-in { animation-delay: 0.8s; }
+  .packages ul li:nth-child(5).animate-slide-in { animation-delay: 1s; }
+
+  .packages h3.animate-slide-in{
+    animation: liftIn 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) 0.1s forwards;
+  }
+
+  .packages p.animate-slide-in{
+    animation: gentleRise 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) 0.2s forwards;
+  }
+  
   .work-grid {
     grid-template-columns: 1fr;
   }
@@ -1044,6 +1071,32 @@ body {
   .qte3 {
     max-width: 100%;
     width: 90%;
+  }
+
+  .quotes ul li:hover {
+    transform: none;
+    transition: none;
+    border-color: rgba(255, 220, 235, 0.6);
+    box-shadow: none;
+  }
+
+  .quotes ul li.animate-slide-in{
+    animation: softPop 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    opacity: 0;
+  }
+
+  .quotes ul li:nth-child(1).animate-slide-in { animation-delay: 0.2s; }
+  .quotes ul li:nth-child(2).animate-slide-in { animation-delay: 0.4s; }
+  .quotes ul li:nth-child(3).animate-slide-in { animation-delay: 0.6s; }
+  .quotes ul li:nth-child(4).animate-slide-in { animation-delay: 0.8s; }
+  .quotes ul li:nth-child(5).animate-slide-in { animation-delay: 1s; }
+
+  .quotes h3.animate-slide-in{
+    animation: liftIn 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) 0.1s forwards;
+  }
+
+  .quotes p.animate-slide-in{
+    animation: gentleRise 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) 0.2s forwards;
   }
 
   .qte1{

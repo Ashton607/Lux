@@ -90,6 +90,56 @@ useEffect(() => {
 }, []);
 
 
+{/*The our package section animiation when scrolling on mobile*/}
+useEffect(() => {
+  if (window.innerWidth > 480) return; // skip on desktop
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      const elements = entry.target.querySelectorAll('.packages h3, .packages p, .packages ul li');
+
+      if (entry.isIntersecting) {
+        elements.forEach(el => el.classList.add('animate-slide-in'));
+      } else {
+        elements.forEach(el => el.classList.remove('animate-slide-in'));
+      }
+    });
+  }, { threshold: 0.1 });
+
+  const workCards = document.querySelectorAll('.package1, .package2, .package3');
+  workCards.forEach(card => observer.observe(card));
+
+  return () => observer.disconnect();
+}, []);
+
+
+
+{/*The our quotes section animiation when scrolling on mobile*/}
+useEffect(() => {
+  if (window.innerWidth > 480) return; // skip on desktop
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      const elements = entry.target.querySelectorAll('.quotes h3, .quotes p, .quotes ul li');
+
+      if (entry.isIntersecting) {
+        elements.forEach(el => el.classList.add('animate-slide-in'));
+      } else {
+        elements.forEach(el => el.classList.remove('animate-slide-in'));
+      }
+    });
+  }, { threshold: 0.1 });
+
+  const workCards = document.querySelectorAll('.qte1, .qte2, .qte3');
+  workCards.forEach(card => observer.observe(card));
+
+  return () => observer.disconnect();
+}, []);
+
+
+
+
+
 const modalClick = () => {
   setIsOpen(true);
 }
@@ -148,14 +198,13 @@ const modal = createPortal(
 const [menuOpen, setMenuOpen] = useState(false);
 
 
-
   return (
     <div>
       {modal}
       <div className="header">
          <ul className={menuOpen ? 'show-mobile-menu' : ''}>
             <li><Link to="advert-container"  smooth={true} offset={-70} duration={500}>Home<House /></Link></li>
-            <li><Link to="container1" smooth={true} offset={0} duration={500}>Services<Layers /></Link></li>
+            <li><Link to="container1" smooth={true} offset={35} duration={500}>Services<Layers /></Link></li>
             <li><Link to="about" smooth={true} offset={25} duration={500}>About<Info /></Link></li>
             <li><Link to="quotes-container" smooth={true} offset={25} duration={500}>Connect<MessageCircle /></Link></li>
         </ul>
