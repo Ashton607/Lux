@@ -303,7 +303,7 @@ const [menuOpen, setMenuOpen] = useState(false);
     {/*Our Work Section*/}
     <div className="about">
   <h2>Our Work by Occasion</h2>
-  <p>Real examples of websites we've crafted for life's special moments. Each designed with care
+  <p>Real examples of websites we craft for life's special moments. Each designed with care
     and attention to detail.
   </p>
 
@@ -312,7 +312,7 @@ const [menuOpen, setMenuOpen] = useState(false);
     <div className="work-card">
       <div className="work-img work1-img" loading="lazy">
         <div className="work-label">
-          <span className="work-icon">💼</span>
+          <span className="work-icon"></span>
           <h3>Businesses</h3>
         </div>
       </div>
@@ -330,7 +330,7 @@ const [menuOpen, setMenuOpen] = useState(false);
     <div className="work-card">
       <div className="work-img work2-img" loading="lazy">
         <div className="work-label">
-          <span className="work-icon">⛪</span>
+          <span className="work-icon"></span>
           <h3>Weddings & Anniversaries</h3>
         </div>
       </div>
@@ -347,7 +347,7 @@ const [menuOpen, setMenuOpen] = useState(false);
     <div className="work-card">
       <div className="work-img work3-img" loading="lazy">
         <div className="work-label">
-          <span className="work-icon">✉️</span>
+          <span className="work-icon"></span>
           <h3>Events</h3>
         </div>
       </div>
@@ -364,7 +364,7 @@ const [menuOpen, setMenuOpen] = useState(false);
     <div className="work-card">
       <div className="work-img work4-img" loading="lazy">
         <div className="work-label">
-          <span className="work-icon">💗</span>
+          <span className="work-icon"></span>
           <h3>Romantic Gestures</h3>
         </div>
       </div>
@@ -381,7 +381,7 @@ const [menuOpen, setMenuOpen] = useState(false);
     <div className="work-card">
       <div className="work-img work5-img" loading="lazy">
         <div className="work-label">
-          <span className="work-icon">🎂</span>
+          <span className="work-icon"></span>
           <h3>Birthday Celebrations</h3>
         </div>
       </div>
