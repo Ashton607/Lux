@@ -5,7 +5,7 @@ import Slide2 from '../slides/Slide2';
 import Slide3 from '../slides/Slide3';
 import {Info, ArrowRight,Star,X,Layers,House,MessageCircle } from 'lucide-react';
 import { createPortal } from "react-dom";
-import { FaWhatsapp, FaInstagram } from 'react-icons/fa'
+import { FaWhatsapp, FaInstagram,FaLaptopCode,FaNetworkWired,FaLeaf } from 'react-icons/fa'
 import { SiGmail } from 'react-icons/si'
 import { TiThMenuOutline } from "react-icons/ti";
 import Footer from '../footer/Footer';
@@ -204,7 +204,7 @@ const [menuOpen, setMenuOpen] = useState(false);
       <div className="header">
          <ul className={menuOpen ? 'show-mobile-menu' : ''}>
             <li><Link to="advert-container"  smooth={true} offset={-70} duration={500}>Home<House /></Link></li>
-            <li><Link to="container1" smooth={true} offset={35} duration={500}>Services<Layers /></Link></li>
+            <li><Link to="container1" smooth={true} offset={25} duration={500}>Services<Layers /></Link></li>
             <li><Link to="about" smooth={true} offset={25} duration={500}>About<Info /></Link></li>
             <li><Link to="quotes-container" smooth={true} offset={25} duration={500}>Connect<MessageCircle /></Link></li>
         </ul>
@@ -233,7 +233,7 @@ const [menuOpen, setMenuOpen] = useState(false);
      {/*Packages Section*/}
 
     <div className="container1">
-      <h2>Crafting Digital Experiences</h2>
+      <h2> OUR SERVICE TIERS</h2>
       <p>Transform your special moments into beautifully crafted digital experiences where creativity meets elegance.
     From intimate celebrations to grand events, Lux combines storytelling,
     animation, and modern design to create unforgettable interactive moments.
@@ -241,7 +241,7 @@ const [menuOpen, setMenuOpen] = useState(false);
 
   <div className="packages">
     <div className="package1">
-      <span className="pkg-icon">✨</span>
+      <span className="pkg-icon"><FaLaptopCode /></span>
       <h3>Prestige</h3>
       <p>full stack digital platforms engineered for creativity,precision, and seamless user experience
          Best for startups, growing businesses, and custom web applications requiring backend systems, 
@@ -262,7 +262,7 @@ const [menuOpen, setMenuOpen] = useState(false);
     </div>
 
     <div className="package2">
-      <span className="pkg-icon">🎨</span>
+      <span className="pkg-icon"><FaNetworkWired /></span>
       <h3>Professional</h3>
       <p>Modern interactive frontend experiences designed for brands, events, and businesses.
          Ideal for business landing pages, wedding invitations, portfolios, product showcases, and immersive event experiences that combine elegant UI/UX with visually engaging animations.</p>
@@ -280,7 +280,7 @@ const [menuOpen, setMenuOpen] = useState(false);
       </div>
 
     <div className="package3">
-      <span className="pkg-icon">🍃</span>
+      <span className="pkg-icon"><FaLeaf /></span>
       <h3>Essential</h3>
       <p>Beautiful single-page digital experiences crafted for personal moments and creative expression.
          Perfect for romantic gestures, birthday surprises, digital letters, invitations, and visually immersive personal pages designed with elegant animations and stunning responsive visuals.</p>
@@ -302,9 +302,9 @@ const [menuOpen, setMenuOpen] = useState(false);
 
     {/*Our Work Section*/}
     <div className="about">
-  <h2>Our Work by Occasion</h2>
-  <p>Real examples of websites we craft for life's special moments. Each designed with care
-    and attention to detail.
+  <h2>OUR WORK</h2>
+  <p>Below are examples of what you can expect from us.
+    Each card shows the type of site you can expect, built with care and attention to detail.
   </p>
 
   <div className="work-grid">
@@ -402,7 +402,7 @@ const [menuOpen, setMenuOpen] = useState(false);
 
       {/*Quotes Section*/}
       <div className="quotes-container">
-        <h2>What's Included</h2>
+        <h2>OUR QUOTES</h2>
         <p>Understanding the difference between our service tiers to help you choose the perfect fit for your needs.</p>
 
        <div className="quotes">
