@@ -1,52 +1,47 @@
 import React, { useEffect, useState } from 'react'
 import './Slide.css'
-import LuxAd from '../../assets/Lux logo.svg'
-import love from '../../assets/loveSVG.svg'
-import Idea from '../../assets/Ideas.svg'
-import interact from '../../assets/interact.svg'
-import bulb from '../../assets/idea.svg'
-import art from '../../assets/Art-amico.svg'
-
+import Lux from '../../assets/Lux logo.svg'
+import { ArrowRight, Sparkles, Palette, Leaf, Star, ChevronDown, Code2, Layers, Heart, Cake, Mail, Church } from 'lucide-react'
+import { useNavigate } from 'react-router-dom'
 
 const Slide1 = () => {
   return (
     <div>
-       <div className="slide1-container">
 
-      <div className="content">
-        <div className="art-bg">
-        <img src={art} alt="Art Background"/>
-      </div>
-        
-      </div>
+       {/* Hero */}
+      <section className="lm-hero">
+        <div className="lm-hero-bg" style={{ transform: `translateY(${scrollY * 0.3}px)` }} />
+        <nav className="lm-nav">
+          <div className="lm-nav-logo">
+          </div>
+        </nav>
 
-      <div className="cards">
-
-        <div className='card1'>
-        <img src={love} alt="Love Icon"/>
-        <h3>Emotion Through Software</h3>
-        <p>Not just a page on a browser. 
-           It's the most creative way to send a love letter to your partner.
-           Because sometimes “I love you” deserves more than just a text message.</p>
+        <div className="lm-hero-content">
+          <div className="lm-hero-badge">Digital Experience Studio</div>
+          <h1 className="lm-hero-title">
+            Crafting Digital<br />
+            <span className="lm-hero-accent">Experiences</span><br />
+            That Last
+          </h1>
+          <p className="lm-hero-sub">
+            From intimate celebrations to corporate platforms — Lux combines storytelling,
+            animation, and modern design to create unforgettable interactive moments.
+          </p>
+          <div className="lm-hero-actions">
+              <button className="lm-btn-primary">Get Started <ArrowRight size={16} /></button>
+            <a href="#services">
+              <button className="lm-btn-ghost">Our Services <ChevronDown size={16} /></button>
+            </a>
+          </div>
         </div>
 
-        <div className='card2'>
-        <img src={Idea} alt="Idea Icon"/>
-        <h3>Bringing <span>YOUR <img src={bulb} alt="bulb" /></span> Ideas To Life</h3>
-        <p>Not just a wedding invitation,
-           a beautifully interactive experience that tells your story before the big day even begins.</p>
+        <div className="lm-hero-scroll">
+          <span>Scroll to explore</span>
+          <div className="lm-scroll-line" />
         </div>
+      </section>
 
-        <div className='card3'>
-        <img src={interact} alt="Interaction Icon"/>
-        <h3>Modern Interactive Experiences</h3>
-        <p>We combine software, animation, storytelling, 
-          and design to craft visually engaging and emotionally driven websites </p>
-        </div>
 
-      </div>
-      
-    </div>
     </div>
   )
 }

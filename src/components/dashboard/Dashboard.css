@@ -570,6 +570,7 @@ body {
   border-radius: 999px; 
   font-size: 14px;
   font-weight: 500;
+  z-index: 1;
 }
 .popular-badge svg {
   margin-bottom: 2px;
@@ -675,6 +676,47 @@ body {
     0 1px 4px rgba(0, 0, 0, 0.05),
     inset 0 1px 0 rgba(255, 255, 255, 0.9);
 }
+.qte-img {
+  position: relative;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px 10px 0 0;
+  margin: -30px -24px 0 -24px; /* bleeds to card edges */
+}
+.qte-label {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  padding: 6px 14px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+.qte-label h3 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #111;
+}
+.qte-info {
+  padding-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+}
+.qte1-img { background-image: url('../../assets/prestige.png'); }
+.qte2-img { background-image: url('../../assets/professional.png'); }
+.qte3-img { background-image: url('../../assets/Essential.png'); }
+
+
+
+
+
+/*Disclaimer section*/
 .disclaimer {
   width: 88%;
   margin-top: 10px;
