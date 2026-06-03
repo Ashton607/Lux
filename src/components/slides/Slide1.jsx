@@ -27,12 +27,6 @@ const Slide1 = () => {
             From intimate celebrations to corporate platforms — Lux combines storytelling,
             animation, and modern design to create unforgettable interactive moments.
           </p>
-          <div className="lm-hero-actions">
-              <button className="lm-btn-primary">Get Started <ArrowRight size={16} /></button>
-            <a href="#services">
-              <button className="lm-btn-ghost">Our Services <ChevronDown size={16} /></button>
-            </a>
-          </div>
         </div>
 
         <div className="lm-hero-scroll">

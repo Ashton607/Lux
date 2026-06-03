@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap');
+
 /* ── Hero ── */
 .lm-hero {
   position: relative;
@@ -197,6 +199,21 @@
   background: rgba(255, 255, 255, 0.3);
   animation: scrollPulse 2s ease infinite;
 }
+
+
+
+
+/* ── Keyframes ── */
+@keyframes lmFadeUp {
+  0%   { opacity: 0; transform: translateY(24px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scrollPulse {
+  0%, 100% { opacity: 0.3; width: 40px; }
+  50%       { opacity: 1; width: 60px; }
+}
+
 
 /* ── Mobile ── */
 @media (max-width: 480px) {
