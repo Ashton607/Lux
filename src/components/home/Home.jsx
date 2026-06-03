@@ -80,7 +80,6 @@ const Home = () => {
         <button className='btn-primary' onClick={() => handleNavigate('/dashboard')}>
           Get Started
         </button>
-        <button className='btn-secondary' onClick={()=> handleNavigate('/discovery')}>Learn More</button>
         </div>
       
       
