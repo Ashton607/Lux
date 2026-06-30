@@ -15,7 +15,8 @@ const Slide3 = () => {
       icon: FaLaptopCode, 
       category: 'Professional',
       description: 'High-converting, performance-optimized entry points',
-      gradient: 'from-blue-500/10 to-cyan-500/10'
+      gradient: 'from-blue-500/10 to-cyan-500/10',
+      site: 'https://ashton607.github.io/luxphotography/'
     },
     { 
       id: 2, 
@@ -31,15 +32,17 @@ const Slide3 = () => {
       icon: GiSolarSystem, 
       category: 'Professional & Essential',
       description: 'Immersive 3D storytelling experiences',
-      gradient: 'from-purple-500/10 to-pink-500/10'
+      gradient: 'from-purple-500/10 to-pink-500/10',
+      site: 'https://ashton607.github.io/romantic-solar-system/'
     },
     { 
       id: 4, 
-      title: 'Birthday Letter', 
+      title: 'Mothers Day Letter', 
       icon: BsEnvelopePaperHeart, 
       category: 'Essential',
       description: 'Personalized, animated digital keepsakes',
-      gradient: 'from-amber-500/10 to-rose-500/10'
+      gradient: 'from-amber-500/10 to-rose-500/10',
+      site: 'https://resilient-sawine-cde63f.netlify.app/'
     },
   ];
 
@@ -92,7 +95,9 @@ const Slide3 = () => {
                 </div>
 
                 <div className="card-footer">
-                  <div className="action-wrapper">
+                   <div className="action-wrapper" onClick={() => project.site && window.open(project.site, '_blank')}
+                   style={{ cursor: project.site ? 'pointer' : 'default', opacity: project.site ? 1 : 0.4 }}
+                   >
                     <span className="action-text">Visit Site</span>
                     <FaArrowRight className="arrow-icon" />
                   </div>

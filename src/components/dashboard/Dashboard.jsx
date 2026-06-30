@@ -274,7 +274,7 @@ const [menuOpen, setMenuOpen] = useState(false);
         <li>SEO Optimized</li>
         <li>Elegant Visual Storytelling</li>
       </ul>
-      <button className="visit-site" onClick={() => window.open('https://ashton607.github.io/Foundation/', '_blank')}>
+      <button className="visit-site" onClick={() => window.open('https://ashton607.github.io/luxphotography/', '_blank')}>
         Visit Site <ArrowRight size={14} />
       </button>
       </div>
@@ -291,7 +291,7 @@ const [menuOpen, setMenuOpen] = useState(false);
         <li>Smooth animations and transitions</li>
         <li>Personalized visual styling</li>
        </ul>
-       <button className="visit-site" onClick={() => window.open('https://luxloveletter.netlify.app', '_blank')}>
+       <button className="visit-site" onClick={() => window.open('https://ashton607.github.io/romantic-solar-system/', '_blank')}>
         Visit Site <ArrowRight size={14} />
       </button>
       </div>
