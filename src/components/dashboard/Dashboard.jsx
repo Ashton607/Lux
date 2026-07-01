@@ -233,7 +233,8 @@ const [menuOpen, setMenuOpen] = useState(false);
      {/*Packages Section*/}
 
     <div className="container1">
-      <h1> OUR SERVICE TIERS</h1>
+      <span className="container1-badge">OUR SERVICE TIERS</span>
+      <h1> </h1>
       <p>Transform your special moments into beautifully crafted digital experiences where creativity meets elegance.
     From intimate celebrations to grand events, Lux combines storytelling,
     animation, and modern design to create unforgettable interactive moments.

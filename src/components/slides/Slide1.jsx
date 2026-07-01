@@ -19,13 +19,14 @@ const Slide1 = () => {
         <div className="lm-hero-content">
           <div className="lm-hero-badge">Digital Experience Studio</div>
           <h1 className="lm-hero-title">
-            Crafting Digital<br />
-            <span className="lm-hero-accent">Experiences</span><br />
-            That Last
+            Custom Website Design<br />
+            <span className="lm-hero-accent">Kimberley</span><br />
+            Northern-Cape Businesses
           </h1>
           <p className="lm-hero-sub">
-            From intimate celebrations to corporate platforms — Lux combines storytelling,
-            animation, and modern design to create unforgettable interactive moments.
+            Luxinteractive 
+            is a South African creative web development studio specializing in immersive websites, 
+            brochure websites, landing pages, and custom digital experiences for local businesses.
           </p>
         </div>
 
