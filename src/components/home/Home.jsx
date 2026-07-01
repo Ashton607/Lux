@@ -21,18 +21,25 @@ const Home = () => {
         const img = entry.target.querySelector('img');
         const title = entry.target.querySelector('.title');
         const p = entry.target.querySelector('p');
-        const buttons = entry.target.querySelectorAll('button');
+        const btn = entry.target.querySelector('.btn-primary');
 
+        if (btn) {
+          btn.addEventListener('animationend', () => {
+            btn.classList.add('done');
+          }, { once: true });
+        }
+
+        
         if(entry.isIntersecting){
           img.classList.add('animate-in');
           title.classList.add('animate-in');
           p.classList.add('animate-in');
-          buttons.forEach(btn => {btn.classList.add('animate-in');});
+          btn.classList.add('animate-in');
         }else{
           img.classList.remove('animate-in');
           title.classList.remove('animate-in');
           p.classList.remove('animate-in');
-          buttons.forEach(btn => {btn.classList.remove('animate-in');});
+          btn.classList.remove('animate-in');
         }
       });   
     },{threshold: 0.1});

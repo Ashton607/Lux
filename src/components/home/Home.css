@@ -19,110 +19,81 @@
 .container img{
     width: 150px;
     height: 150px;
-
+    opacity:0;
 }
 
 .container img.animate-in {
-    animation: fadeInUp 3s cubic-bezier(0.34, 1.56, 0.64, 1);
-
-    animation-fill-mode: forwards;
+    animation: fadeInUp 1.3s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    animation-delay: 0.8s;
 }
 
 .container .title{
     font-size: 36px;
     color: #575757;
     margin-bottom: 10px;
+    opacity: 0;
 }
 
 .container .title.animate-in {
-    animation: fadeInUp 2s cubic-bezier(0.34, 1.56, 0.64, 1);
-    
-    animation-fill-mode: forwards;
+    animation: fadeInUp 1.3s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    animation-delay: 0.6s;
 }
 
 .container p{
     font-size: 18px;
     color: #666;
     margin-bottom: 30px;
+    opacity: 0;
 }
 
 .container p.animate-in {
-    animation: fadeInUp 1.5s cubic-bezier(0.34, 1.56, 0.64, 1);
-    
-    animation-fill-mode: forwards;
+    animation: fadeInUp 1.3s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    animation-delay: 0.4s;
 }
 
-.container button{
-    padding: 10px 20px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    margin: 0 10px;
-}
 
-.container button.animate-in {
-    animation: fadeInUp 1.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-    animation-fill-mode: forwards;
-}
-
-.container img,
-.container .title,
-.container p,
-.container button {
-  opacity: 0;
-}
 
 
 .btn-primary {
   position: relative;
-  background: linear-gradient(135deg, #1a0a2e, #8b0000);
-  color: #fff;
-  box-shadow: 0 4px 15px rgba(139, 0, 0, 0.3);
-  overflow: hidden;
-  z-index: 1;
-  width: 130px;
-  border-radius: 5px;
-  transition: ease-in-out 0.9s;
-}
-
-.btn-primary::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, #2d1b69, #cc0000, #00008b);
+  padding: 8px 20px;
+  background: linear-gradient(135deg, 
+    rgba(255, 252, 220, 0.15) 0%, 
+    rgba(57, 88, 47, 0.25) 50%, 
+    rgba(2, 28, 65, 0.3) 100%
+  );
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  font-size: 0.98rem;
   opacity: 0;
-  transition: opacity 0.4s ease;
-  z-index: -1;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  transition: transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1),
+              box-shadow 0.3s ease,
+              background 0.3s ease;
 }
-
-.btn-primary::after {
-  content: '';
-  position: absolute;
-  inset: -2px;
-  background: linear-gradient(135deg, #8b0000, #2d1b69, #cc0000, #1a0a2e);
-  background-size: 300% 300%;
-  animation: gradientShift 3s ease infinite;
-  opacity: 0;
-  z-index: -2;
-  border-radius: 10px;
-  transition: opacity 0.4s ease;
+.btn-primary.animate-in {
+  animation: fadeInUp 1.3s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  animation-delay: 0.2s;
 }
-
-.btn-primary:hover::before {
+.btn-primary.done {
+  animation: none;
   opacity: 1;
 }
 
-.btn-primary:hover::after {
-  opacity: 1;
+.btn-primary.done:hover {
+  background: linear-gradient(90deg,
+    rgba(1, 216, 116, 0.356) 0%,
+    rgba(0, 97, 60, 0.35) 50%,
+    rgba(0, 69, 165, 0.4) 100%
+  );
+  border-color: rgba(255, 255, 255, 0.25);
+  transform: scale(1.05);
 }
 
-.btn-primary:hover {
-  box-shadow: 0 6px 25px rgba(139, 0, 0, 0.5);
-  transform: scale(1.15);
-  width: 150px;
-  transition:ease-in-out 0.3s;
-  border-radius: 15px;
-}
+
 
 
 @keyframes gradientShift {
