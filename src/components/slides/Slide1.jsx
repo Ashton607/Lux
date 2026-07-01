@@ -17,7 +17,7 @@ const Slide1 = () => {
         </nav>
 
         <div className="lm-hero-content">
-          <div className="lm-hero-badge">Digital Experience Studio</div>
+          <div className="lm-hero-badge">Website Development</div>
           <h1 className="lm-hero-title">
             Custom Website Design<br />
             <span className="lm-hero-accent">Kimberley</span><br />

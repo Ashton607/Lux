@@ -233,11 +233,11 @@ const [menuOpen, setMenuOpen] = useState(false);
      {/*Packages Section*/}
 
     <div className="container1">
-      <span className="container1-badge">OUR SERVICE TIERS</span>
-      <h1> </h1>
-      <p>Transform your special moments into beautifully crafted digital experiences where creativity meets elegance.
-    From intimate celebrations to grand events, Lux combines storytelling,
-    animation, and modern design to create unforgettable interactive moments.
+      <span className='container1-badge'>OUR SERVICE TIERS</span>
+      <h1>Web Design Packages in the Northern Cape</h1>
+      <p>Finding the right website developer shouldn't involve guesswork. We offer transparent, 
+  fixed-price web design packages tailored to help Northern Cape small businesses and 
+  startups build a professional online presence without breaking the bank.
       </p>
 
   <div className="packages">
