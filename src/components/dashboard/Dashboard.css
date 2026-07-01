@@ -1,25 +1,10 @@
-body {
-  overflow-x: hidden;
-}
-
-@keyframes appear {
-  0%  { 
-       opacity: 0;
-       transform: scale(1.28); 
-      }
-  100% {
-        transform:scale(1);
-        opacity: 1;
-        }
-}
-
 .header {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   position: sticky;
   top: 0;
   z-index: 100;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(8px);
   padding: 10px 20px;
   box-sizing: border-box;
 }
@@ -34,45 +19,32 @@ body {
 }
 
 .header ul li{
-    animation: appear 2.5s cubic-bezier(0.34, 2.8, 0.64, 1) forwards;
-    opacity: 0;
-}
-
-.header ul li:hover {
-  transform: scale(1.1);
-  transition: all 0.4s ease-in-out;
+  font-size: 0.885rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  background: linear-gradient(to right, #1f4115, #234f8d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   cursor: pointer;
-  text-decoration: underline;
-  text-underline-offset: 4px;
-  text-decoration-color: #005c48;
+  position: relative;
+  padding-bottom: 4px;
+  transition: color 0.3s ease;
 }
 
-.header ul li:active {
-  transform: scale(0.95);
-  transition: all 0.1s ease;
+.header ul li::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 1px;
+  background-color: #00440b;
+  transition: width 0.3s ease;
 }
 
-.header ul li svg {
-  margin-left: 6px;
-  color: #005c48;
-  transition: all 0.3s ease;
-  margin-bottom: -5px;
-}
-
-.header ul li:nth-child(1){
-    animation-delay: 0.2s;
-}
-.header ul li:nth-child(2){
-    animation-delay: 0.4s;
-}
-.header ul li:nth-child(3){
-    animation-delay: 0.6s;
-}
-.header ul li:nth-child(4){
-    animation-delay: 0.8s;
-}
-.header ul li:nth-child(5){
-    animation-delay: 1s;
+.header ul li:hover::after {
+  width: 100%;
 }
 
 .advert-container {
@@ -153,6 +125,16 @@ body {
   opacity: 1;
 }
 
+@keyframes appear {
+  0%  { 
+       opacity: 0;
+       transform: scale(1.28); 
+      }
+  100% {
+        transform:scale(1);
+        opacity: 1;
+        }
+}
 
 
 
@@ -167,7 +149,7 @@ body {
   background: #f0f4f8;
 }
 
-.container1 h2 {
+.container1 h1 {
   text-align: center;
   font-size: 1.8rem;
   margin: 0 0 16px 0;

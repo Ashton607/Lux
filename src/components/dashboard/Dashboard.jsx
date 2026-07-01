@@ -3,7 +3,7 @@ import './Dashboard.css'
 import Slide1 from '../slides/Slide1';
 import Slide2 from '../slides/Slide2';
 import Slide3 from '../slides/Slide3';
-import {Info, ArrowRight,Star,X,Layers,House,MessageCircle } from 'lucide-react';
+import {Info, ArrowRight,Star,X } from 'lucide-react';
 import { createPortal } from "react-dom";
 import { FaWhatsapp, FaInstagram,FaLaptopCode,FaNetworkWired,FaLeaf } from 'react-icons/fa'
 import { SiGmail } from 'react-icons/si'
@@ -203,10 +203,10 @@ const [menuOpen, setMenuOpen] = useState(false);
       {modal}
       <div className="header">
          <ul className={menuOpen ? 'show-mobile-menu' : ''}>
-            <li><Link to="advert-container"  smooth={true} offset={-70} duration={500}>Home<House /></Link></li>
-            <li><Link to="container1" smooth={true} offset={25} duration={500}>Services<Layers /></Link></li>
-            <li><Link to="about" smooth={true} offset={25} duration={500}>About<Info /></Link></li>
-            <li><Link to="quotes-container" smooth={true} offset={25} duration={500}>Connect<MessageCircle /></Link></li>
+            <li><Link to="advert-container"  smooth={true} offset={-70} duration={500}>Home</Link></li>
+            <li><Link to="container1" smooth={true} offset={25} duration={500}>Services</Link></li>
+            <li><Link to="about" smooth={true} offset={25} duration={500}>About</Link></li>
+            <li><Link to="quotes-container" smooth={true} offset={25} duration={500}>Connect</Link></li>
         </ul>
         <span className="menu-icon" onClick={() => setMenuOpen(!menuOpen)}>
         {menuOpen ? <X size={30} /> : <TiThMenuOutline size={24} />}
@@ -233,7 +233,7 @@ const [menuOpen, setMenuOpen] = useState(false);
      {/*Packages Section*/}
 
     <div className="container1">
-      <h2> OUR SERVICE TIERS</h2>
+      <h1> OUR SERVICE TIERS</h1>
       <p>Transform your special moments into beautifully crafted digital experiences where creativity meets elegance.
     From intimate celebrations to grand events, Lux combines storytelling,
     animation, and modern design to create unforgettable interactive moments.
