@@ -164,7 +164,7 @@ const modal = createPortal(
       onClick={(e) => e.stopPropagation()}
     >
       <div className="modal-header">
-        <h3>Quotation</h3>
+        <h3>Free Quotation</h3>
         <button onClick={closePopup}>
           <X size={18} />
         </button>
@@ -204,9 +204,9 @@ const [menuOpen, setMenuOpen] = useState(false);
       <div className="header">
          <ul className={menuOpen ? 'show-mobile-menu' : ''}>
             <li><Link to="advert-container"  smooth={true} offset={-70} duration={500}>Home</Link></li>
-            <li><Link to="container1" smooth={true} offset={25} duration={500}>Services</Link></li>
-            <li><Link to="about" smooth={true} offset={25} duration={500}>About</Link></li>
-            <li><Link to="quotes-container" smooth={true} offset={25} duration={500}>Connect</Link></li>
+            <li><Link to="container1" smooth={true} offset={15} duration={500}>Services</Link></li>
+            <li><Link to="about" smooth={true} offset={15} duration={500}>About</Link></li>
+            <li><Link to="quotes-container" smooth={true} offset={15} duration={500}>Connect</Link></li>
         </ul>
         <span className="menu-icon" onClick={() => setMenuOpen(!menuOpen)}>
         {menuOpen ? <X size={30} /> : <TiThMenuOutline size={24} />}
@@ -234,10 +234,10 @@ const [menuOpen, setMenuOpen] = useState(false);
 
     <div className="container1">
       <span className='container1-badge'>OUR SERVICE TIERS</span>
-      <h1>Web Design Packages in the Northern Cape</h1>
+      <h2>Web Design Packages in the Northern Cape</h2>
       <p>Finding the right website developer shouldn't involve guesswork. We offer transparent, 
-  fixed-price web design packages tailored to help Northern Cape small businesses and 
-  startups build a professional online presence without breaking the bank.
+        fixed-price web design packages tailored to help Northern Cape small businesses and 
+        startups build a professional online presence without breaking the bank.
       </p>
 
   <div className="packages">
@@ -303,9 +303,11 @@ const [menuOpen, setMenuOpen] = useState(false);
 
     {/*Our Work Section*/}
     <div className="about">
-  <h2>OUR WORK</h2>
-  <p>Below are examples of what you can expect from us.
-    Each card shows the type of site you can expect, built with care and attention to detail.
+    <span className="about-badge">Our work</span>
+  <h2>Web Design & Digital Services Tailored for Your Business</h2>
+  <p>We blend clean code with strategic design to build high-performance digital products. 
+  From mobile-friendly business websites to custom web applications, we provide the 
+  technical expertise Northern Cape companies need to thrive online.
   </p>
 
   <div className="work-grid">
@@ -403,8 +405,11 @@ const [menuOpen, setMenuOpen] = useState(false);
 
       {/*Quotes Section*/}
       <div className="quotes-container">
-        <h2>OUR QUOTES</h2>
-        <p>Understanding the difference between our service tiers to help you choose the perfect fit for your needs.</p>
+        <span className="quotes-badge">OUR QUOTES</span>
+        <h2>Ready to Start Your Project? Request a Free Website Quote</h2>
+        <p>Whether you need a simple corporate landing page or a brochure website, 
+          our team is ready to bring your vision to life. Contact the Northern Cape's most 
+          creative web development agency directly for a transparent, no-obligation quotation.</p>
 
        <div className="quotes">
   <div className="qte1">
