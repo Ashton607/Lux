@@ -205,7 +205,7 @@ const [menuOpen, setMenuOpen] = useState(false);
          <ul className={menuOpen ? 'show-mobile-menu' : ''}>
             <li><Link to="advert-container"  smooth={true} offset={-70} duration={500}>Home</Link></li>
             <li><Link to="container1" smooth={true} offset={15} duration={500}>Services</Link></li>
-            <li><Link to="about" smooth={true} offset={15} duration={500}>About</Link></li>
+            <li><Link to="about" smooth={true} offset={15} duration={500}>our work</Link></li>
             <li><Link to="quotes-container" smooth={true} offset={15} duration={500}>Connect</Link></li>
         </ul>
         <span className="menu-icon" onClick={() => setMenuOpen(!menuOpen)}>
