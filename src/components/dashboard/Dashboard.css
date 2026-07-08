@@ -216,8 +216,6 @@
   flex-direction: column;
   gap: 12px;
   border: 1px solid rgba(255, 255, 255, 0.9);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
   box-shadow: 
     0 4px 24px rgba(0, 0, 0, 0.05),
     0 1px 4px rgba(0, 0, 0, 0.03),
@@ -310,7 +308,6 @@
   border: none;
   border-radius: 10px;
   background: rgba(255, 255, 255, 0.6);
-  backdrop-filter: blur(8px);
   border: 1px solid rgba(255, 200, 230, 0.6);
   color: #444;
   font-size: 0.85rem;
@@ -443,8 +440,7 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  background: rgba(255, 255, 255, 0.5);
-  backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.74);
   padding: 8px 14px;
   border-radius: 10px;
   box-shadow: 0 0px 15px 0px rgba(0, 0, 0, 0.616);
@@ -492,7 +488,6 @@
 
 .work-tags span {
   background: rgba(255, 255, 255, 0.5);
-  backdrop-filter: blur(12px);
   font-size: 0.78rem;
   padding: 4px 12px;
   border-radius: 20px;
@@ -616,7 +611,6 @@
   flex-direction: column;
   gap: 12px;
   border: 1px solid rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(4px);
   transition: all 0.9s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
@@ -722,7 +716,6 @@
   border: none;
   border-radius: 10px;
   background: rgba(255, 255, 255, 0.6);
-  backdrop-filter: blur(8px);
   border: 1px solid rgba(255, 200, 230, 0.6);
   color: #444;
   font-size: 0.85rem;
@@ -762,8 +755,7 @@
   position: absolute;
   bottom: 12px;
   left: 12px;
-  background: rgba(255, 255, 255, 0.5);
-  backdrop-filter: blur(14px);
+  background: rgba(255, 255, 255, 0.863);
   padding: 6px 14px;
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
